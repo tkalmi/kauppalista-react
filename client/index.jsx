@@ -24,7 +24,12 @@ if (process.env.NODE_ENV === 'development') {
 //   .set('errorMsg', new Map())
 
 // Create SocketIO connection
-let socket = io(`${location.protocol}//${location.hostname}:${process.env.PORT || 3000}`);
+let socket;
+if (process.env.NODE_ENV === 'development') {
+  socket = io(`${location.protocol}//${location.hostname}:${process.env.PORT || 3000}`);
+} else {
+  socket = io(`${location.protocol}//${location.hostname}`);
+}
 
 // Create Redux store with middleware to stream actions to the socket connection
 const createStoreWithMiddleware = applyMiddleware(socketReduxMiddleware(socket))(createStore);
