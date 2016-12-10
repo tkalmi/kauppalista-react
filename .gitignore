@@ -1,5 +1,6 @@
 node_modules
 data
 yarn-error.log
-npm-error.log
-build
+npm-debug.log
+server_build
+static/bundle.js

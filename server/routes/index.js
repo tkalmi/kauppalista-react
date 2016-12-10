@@ -15,7 +15,7 @@ const router = express.Router();
 
 // MAIN PAGE GET =====================
 router.get('/', (req, res, next) => {
-    res.sendFile(path.join(__dirname, '../../index.html'));
+    res.sendFile(path.join(process.env.PWD, 'index.html'));
 });
 
 // ITEMS POST =====================

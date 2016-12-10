@@ -3,7 +3,7 @@ var path = require('path');
 var autoprefixer = require('autoprefixer');
 var isProd = process.env.NODE_ENV === 'production';
 
-var BUILD_DIR = path.resolve(__dirname, 'build');
+var BUILD_DIR = path.resolve(__dirname, 'static');
 
 var plugins = [
     // set NODE_ENV for client side too
@@ -23,7 +23,7 @@ var plugins = [
 
 // If in production: remove warnings from Uglify
 if (isProd) {
-  plugins.push(new webpack.optimized.UglifyJsPlugin({
+  plugins.push(new webpack.optimize.UglifyJsPlugin({
     compress: {
       warnings: false
     }
@@ -38,7 +38,7 @@ module.exports = {
     ] : './client/index.jsx',
     output: {
         path: BUILD_DIR,
-        publicPath: '/build/',
+        publicPath: '/static/',
         filename: 'bundle.js'
     },
     module: {

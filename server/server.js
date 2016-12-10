@@ -4,6 +4,10 @@ if (process.env.NODE_ENV !== 'production') {
         sourceMaps: true
     });
 }
+
+// SET PWD TO REPLACE __dirname FOR HEROKU ================
+process.env.PWD = process.cwd();
+
 import express from 'Express';
 import morgan from 'morgan';
 import * as bodyParser from 'body-parser';
@@ -22,6 +26,7 @@ import ShoppingList from './models/ShoppingList';
 import { socketActions, socketOnConnection } from './utils/socketHelpers';
 
 import router from './routes/index';
+
 
 // CONFIG ENVIREONMENT CONSTANTS ===================
 const port = process.env.PORT || 3000;
@@ -54,7 +59,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(favicon(path.join(__dirname, '..', 'favicon.ico')));
+app.use(express.static(path.join(process.env.PWD, 'static'))); // Use static folder as the root for static files
+app.use(favicon(path.join(process.env.PWD, 'static', 'favicon.ico')));
 
 // ROUTES =============================================
 app.use('/', router);

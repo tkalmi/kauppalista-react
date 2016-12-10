@@ -9,8 +9,8 @@
   "scripts": {
     "build-prod": "npm run build-prod-server && npm run build-prod-client",
     "build-prod-client": "cross-env NODE_ENV=production webpack --config webpack.config.js -p --progress",
-    "build-prod-server": "babel -d ./build ./server -s",
-    "web": "npm run build-prod && cross-env NODE_ENV=production node build/server.js",
+    "build-prod-server": "babel -d ./server_build ./server -s",
+    "web": "npm run build-prod && cross-env NODE_ENV=production node server_build/server.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node --presets es2015,stage-2 server/server.js"
   },
   "keywords": [
