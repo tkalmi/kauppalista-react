@@ -7,6 +7,7 @@
   },
   "main": "server/server.js",
   "scripts": {
+    "start": "npm run web",
     "build-prod": "npm run build-prod-server && npm run build-prod-client",
     "build-prod-client": "cross-env NODE_ENV=production webpack --config webpack.config.js -p --progress",
     "build-prod-server": "babel -d ./server_build ./server -s",
