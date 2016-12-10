@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../server/models/index.js"],"names":["Item","ShoppingList"],"mappings":";;;;;;;AAAA;;;;AACA;;;;;;AAEA;;QAEQA,I;QAAMC,Y","file":"index.js","sourcesContent":["import Item from './Item';\r\nimport ShoppingList from './ShoppingList'\r\n\r\n// THIS FILE SIMPLY COLLECTS ALL MODELS INTO ONE FILE AND EXPORTS THEM\r\n\r\nexport {Item, ShoppingList};\r\n"]}
