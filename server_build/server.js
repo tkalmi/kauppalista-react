@@ -1,8 +1,8 @@
 'use strict';
 
-var _Express = require('Express');
+var _express = require('express');
 
-var _Express2 = _interopRequireDefault(_Express);
+var _express2 = _interopRequireDefault(_express);
 
 var _morgan = require('morgan');
 
@@ -81,7 +81,7 @@ _mongoose2.default.connect(process.env.MONGODB_URI || 'mongodb://localhost/testi
     return console.error(err);
 });
 
-var app = (0, _Express2.default)();
+var app = (0, _express2.default)();
 var server = _http2.default.Server(app);
 var io = new _socket2.default(server);
 
@@ -103,7 +103,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(_Express2.default.static(_path2.default.join(process.env.PWD, 'static'))); // Use static folder as the root for static files
+app.use(_express2.default.static(_path2.default.join(process.env.PWD, 'static'))); // Use static folder as the root for static files
 app.use((0, _serveFavicon2.default)(_path2.default.join(process.env.PWD, 'static', 'favicon.ico')));
 
 // ROUTES =============================================

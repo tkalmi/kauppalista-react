@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
 // SET PWD TO REPLACE __dirname FOR HEROKU ================
 process.env.PWD = process.cwd();
 
-import express from 'Express';
+import express from 'express';
 import morgan from 'morgan';
 import * as bodyParser from 'body-parser';
 import mongoose from 'mongoose';
