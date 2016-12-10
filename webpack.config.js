@@ -3,7 +3,8 @@ var path = require('path');
 var autoprefixer = require('autoprefixer');
 var isProd = process.env.NODE_ENV === 'production';
 
-var BUILD_DIR = path.resolve(__dirname, 'static');
+var BUILD_DIR = isProd ? path.resolve(__dirname, 'static') : path.resolve(__dirname, 'build');
+console.log(process.env.NODE_ENV);
 
 var plugins = [
     // set NODE_ENV for client side too
@@ -38,7 +39,7 @@ module.exports = {
     ] : './client/index.jsx',
     output: {
         path: BUILD_DIR,
-        publicPath: '/static/',
+        publicPath: isProd ? '/static/' : '/build/',
         filename: 'bundle.js'
     },
     module: {

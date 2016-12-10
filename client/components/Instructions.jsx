@@ -5,7 +5,7 @@ const Instructions = ({ dismissInstructions }) => (
         <article>
             <h1>Ohjeet</h1>
             <i className="fa fa-times" aria-hidden="true" onClick={dismissInstructions}></i>
-            <p>Luo uusi kauppalista painamalla keskellä olevaa nappia "Luo uusi kauppalista". Tällöin sinut ohjataan uudelle sivulle, jossa aukeaa uusi kauppalistasi. Pääset käyttämään listaasi myös myöhemmin siirtymällä kauppalistan URLiin.</p>
+            <p>Luo uusi kauppalista painamalla keskellä olevaa nappia "Luo uusi lista". Tällöin sinut ohjataan uudelle sivulle, jossa aukeaa uusi kauppalistasi. Pääset käyttämään listaasi myös myöhemmin siirtymällä kauppalistan URLiin.</p>
             <p>Lisää uusi tavara kauppalistaan täyttämällä sen nimi ja painamalla "Lisää"-nappia.</p>
             <p>Voit muokata listassa olevaa tavaroa painamalla kynän kuvaa.</p>
             <p>Voit poistaa listassa olevan tavaran painamalla roskakorin kuvaa.</p>
