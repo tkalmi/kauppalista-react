@@ -35,7 +35,8 @@ const App = (state) => {
 
                 {state.isList
                     ? <div className="" style={{
-                            padding: '0 15px'
+                            padding: '0 15px',
+                            height: '35px'
                         }}>
                             <CopyLinkButton/>
                             <form className="create-list pull-right" method="POST" action="/createList">
