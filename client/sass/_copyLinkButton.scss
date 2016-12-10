@@ -1,0 +1,44 @@
+.copy-to-clipboard {
+    // width: 100%;
+    // text-align: center;
+    position: absolute;
+    & > div {
+    }
+}
+
+.copy-link-response {
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 5px;
+    padding: 3px 5px;
+    opacity: 0;
+}
+
+.copy-link-input {
+  padding: 6px 2px;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #bbb;
+  display:none;
+}
+
+.copy-link-animation-triggered {
+    animation: copy-link-response-animation 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes copy-link-response-animation {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
