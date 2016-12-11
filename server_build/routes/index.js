@@ -61,7 +61,12 @@ router.get('/', function (req, res, next) {
 // LIST GET ======================
 router.get('/:listID', function (req, res, next) {
 
-    res.sendFile(_path2.default.join(__dirname, '../../index.html'));
+    if (process.env.NODE_ENV === 'development') {
+        res.sendFile(_path2.default.join(__dirname, '../../index_dev.html'));
+    } else {
+        res.sendFile(_path2.default.join(__dirname, '../../index.html'));
+    }
+
     // let promise = Item.find().exec();
     // promise.then((items) => {
     //   res.json(items);
