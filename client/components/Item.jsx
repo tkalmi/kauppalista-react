@@ -13,7 +13,8 @@ const Item = ({item, clickBuy, clickDelete, clickEdit}) => {
             <td>{item.unit}</td>
             <td>{item.additionalInfo}</td>
             <td style={{
-                padding: '5px'
+                padding: '5px',
+                minWidth: '87px'
             }}>
                 <button className="btn btn-info" onClick={() => {
                     clickEdit(item)
