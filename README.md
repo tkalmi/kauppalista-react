@@ -3,10 +3,10 @@ Structure:
 'server' directory contains all server-side code
   - server.js is the entry point to server-side
   - routes directory contains all routing logic
-  - models directory contains all mongo models
+  - models directory contains all Mongo models
 
 'data' directory contains all MongoDB files
-  - everything is generated automatically, please don't touch to them
+  - everything is generated automatically, please don't touch them
 
 'client' directory contains all client-side code
   - index.jsx is the entry point to client-side
@@ -17,5 +17,6 @@ Structure:
 
 Run the app:
 
-  1. When running the app locally, simply use your MongoDB 'testiredux' and run it.
-  2. Run `npm run dev` to open the development environment -- includes Node-Inspector (Babel mode) and Nodemon for rapid development and debugging.
+  1. When running the app locally, simply use your MongoDB instance 'testiredux' and run it.
+  2. Run `npm run dev` to open the development environment -- includes babel-node and Nodemon for rapid development and debugging.
+  3. When building for production, use `npm run web` -- Procfile contains the necessary scripts for running the service in Heroku
